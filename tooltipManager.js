@@ -75,7 +75,14 @@ createParCoords = function(csv, headers){
         return e;
     });
 
-    var parcoords = d3.parcoords()("#example")
+    //if(parcoords == undefined) {
+        console.log("inicializando");
+        parcoords = d3.parcoords()("#parc");
+    //}
+    //else
+    //    console.log("já inicializado");
+
+    parcoords
         .data(dataAttributes)
         .hideAxis(["class", "mouseOver"])
         .alpha(0.4)
