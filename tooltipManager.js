@@ -38,6 +38,7 @@ setupTooltip = function(headers, headersClass, csv) {
         d.mouseOver = 0;
         d3.select(this).attr("stroke-width", 0);
         tooltip.transition().duration(150).style("opacity", 0);
+        tooltip.style("display", "none");
         colorAll = true;
         pc.data(csv).alpha(0.4).render();
     });
@@ -50,6 +51,7 @@ setupTooltip = function(headers, headersClass, csv) {
         tooltip.style("top", (y + 10) + "px")
             .style("left", (x + 10) + "px");
     });
+    return pc;
 }
 
 getInstanceStr = function (d, headers, headersClass) {

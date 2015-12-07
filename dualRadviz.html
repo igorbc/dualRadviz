@@ -125,7 +125,7 @@
                         })
 
                 // SETUP BRUSH
-                function setupBrush() {
+                function setupBrush(csv) {
                     var brush = d3.svg.polybrush()
                             .x(d3.scale.linear().range([0, svgWidth]))
                             .y(d3.scale.linear().range([0, svgHeight]))
@@ -140,13 +140,16 @@
 
                                     if (brush.isWithinExtent(x, y)) {
                                         d3.select(this).classed("selected", true);
+                                        d.mouseOver = 1;
 
                                         return true;
                                     } else {
                                         d3.select(this).classed("selected", false);
+                                        d.mouseOver = 0;
 
-                                        return false;
                                     }
+                                    colorAll = false;
+                                    parcoords.data(csv).alpha(1).render();
                                 });
                             });
 
@@ -191,7 +194,7 @@
                         }
                     }
 
-                    setupBrush();
+                    setupBrush(csv);
 
                     headers = headers.slice(0, classIndex);
                     rvInst.initializeDaInfo(headers, csv);
