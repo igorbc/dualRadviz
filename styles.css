@@ -73,6 +73,6 @@ body {
 
 circle.selected {
 //fill: red;
-    stroke: darkred;
-    stroke-width: 3;
+    stroke: black;
+    stroke-width: 2;
 }

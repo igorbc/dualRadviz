@@ -94,6 +94,7 @@
             function destroyCurrent(){
                 svgContainer.selectAll("*").remove();
 
+                color = d3.scale.category10();
 
                 d3.selectAll("#parc").remove();
                 d3.selectAll("#sliderContainer").append("div")
@@ -148,9 +149,10 @@
                                         d.mouseOver = 0;
 
                                     }
-                                    colorAll = false;
-                                    parcoords.data(csv).alpha(1).render();
+
                                 });
+                                colorAll = false;
+                                parcoords.data(csv).alpha(1).render();
                             });
 
                     svgContainer.append("g")

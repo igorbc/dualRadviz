@@ -28,7 +28,7 @@ setupTooltip = function(headers, headersClass, csv) {
         tooltip.style("display", "block");
         tooltip.transition().duration(150).style("opacity", .9)
         d3.select(this).attr("stroke", "black");
-        d3.select(this).attr("stroke-width", 2);
+        d3.select(this).attr("stroke-width", 3);
 
         colorAll = false;
         pc.data(csv).alpha(1).render();
