@@ -1,0 +1,6 @@
+atr 1,atr 2,atr 3,atr 4,class,confidence(A),confidence(B),confidence(C),confidence(D),prediction(class)
+1,1,0,0,A,0.8,0.1,0.1,0.0,A
+1,0,1,0,A,0.8,0.1,0.1,0.0,A
+1,1,1,1,A,0.8,0.1,0.1,0.0,A
+0,0,0,1,A,0.8,0.1,0.1,0.0,A
+
