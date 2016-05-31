@@ -41,7 +41,7 @@ function RvCircle(){
             unscaledY = -Math.sin(thisDa.arc);
 
             thisDa.key = headers[i].key.toString();
-            thisDa.r = 4;
+            thisDa.r = 7;
 
             thisDa.x = this.x + unscaledX * (this.r + thisDa.r/2);
             thisDa.y = this.y + unscaledY * (this.r + thisDa.r/2);
@@ -162,10 +162,8 @@ getInstancePosition = function(d) {
         var val = da[i].scale(+d[da[i].key]);
         //var val = +d[da[i].key];
         //console.log(val);
-		somaX = somaX + da[i].scaledX * val * rv.contribution;
-        somaY = somaY + da[i].scaledY * val * rv.contribution;
-        //somaX = somaX + da[i].x * val * rv.contribution;
-        //somaY = somaY + da[i].y * val * rv.contribution;
+        somaX = somaX + da[i].x * val * rv.contribution;
+        somaY = somaY + da[i].y * val * rv.contribution;
         somaDenominador = somaDenominador + val * rv.contribution;
     }
 
